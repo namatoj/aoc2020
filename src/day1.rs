@@ -41,8 +41,8 @@ pub fn part_two(input: &[String]) -> i32 {
 fn part1_example_1() {
     let v = vec!["1721", "979", "366", "299", "675", "1456"];
 
-    // NOTE: This smells, but hey, the show must go on.
-    let v = v.iter().map(|x| x.clone().to_owned()).collect();
+    let v: Vec<_> = v.iter().map(|x| x.to_string()).collect();
+    
     assert_eq!(514579, first(&v));
 }
 
@@ -50,7 +50,7 @@ fn part1_example_1() {
 fn part2_example_1() {
     let v = vec!["1721", "979", "366", "299", "675", "1456"];
 
-    // NOTE: This smells, but hey, the show must go on.
-    let v = v.iter().map(|x| x.clone().to_owned()).collect();
+    let v: Vec<_> = v.iter().map(|x| x.to_string()).collect();
+
     assert_eq!(241861950, part_two(&v));
 }
