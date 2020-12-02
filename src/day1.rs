@@ -3,7 +3,6 @@ pub fn run(input: Vec<String>) {
     println!("=====");
     // println!("{:?}", input);
 
-
     println!("part one: {}", first(&input));
     println!("part two: {}", part_two(&input));
 }
@@ -28,7 +27,7 @@ pub fn part_two(input: &[String]) -> i32 {
     for x in &values {
         for y in &values {
             for z in &values {
-                let sum = x + y + z ;
+                let sum = x + y + z;
                 if sum == 2020 {
                     return x * y * z;
                 }
@@ -37,7 +36,6 @@ pub fn part_two(input: &[String]) -> i32 {
     }
     panic!("No three numbers sum to 2020 in input");
 }
-
 
 #[test]
 fn part1_example_1() {
