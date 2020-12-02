@@ -1,4 +1,5 @@
 use aoc2020::day1;
+use aoc2020::day2;
 
 use std::env;
 use std::fs::File;
@@ -13,10 +14,10 @@ fn main() {
 
         let input = reader.lines().map(|line| line.unwrap()).collect();
 
-        println!("- {}:", day);
         match day.as_ref() {
             "day1" => day1::run(input),
-            _ => println!("{}, did not match :(", day),
+            "day2" => day2::run(input),
+            _ => println!("{}, did not match :(, did you add it do aoc.rs", day),
         }
     }
 }
