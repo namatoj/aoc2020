@@ -42,11 +42,10 @@ pub fn part_two(input: &[String]) -> u64 {
         Slope { right: 1, down: 2 },
     ];
 
-    let mut result = 1;
-    for slope in slopes {
-        result *= check_slope(input, &slope);
-    }
-    result
+    slopes
+        .iter()
+        .map(|slope| check_slope(input, &slope))
+        .product()
 }
 
 #[test]
