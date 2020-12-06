@@ -48,7 +48,7 @@ impl FromStr for Password {
             .unwrap();
         let password = it.next().unwrap().to_string();
 
-        let mut limit_iterator = limits.split("-");
+        let mut limit_iterator = limits.split('-');
         let lower_limit = limit_iterator.next().unwrap();
         let upper_limit = limit_iterator.next().unwrap();
 

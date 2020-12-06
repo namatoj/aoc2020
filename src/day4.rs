@@ -23,7 +23,7 @@ pub fn part_one(input: &[String]) -> i32 {
         } else {
             let fields = row.split_whitespace();
             for field in fields {
-                let key_val: Vec<&str> = field.split(":").collect();
+                let key_val: Vec<&str> = field.split(':').collect();
                 keys_in_passport.insert(key_val[0]);
             }
         }
@@ -74,7 +74,7 @@ impl Passport {
         let mut cid = None;
 
         for key_val in key_vals {
-            let key_val: Vec<_> = key_val.split(":").collect();
+            let key_val: Vec<_> = key_val.split(':').collect();
             let key = key_val[0];
             let val = key_val[1];
             match key {

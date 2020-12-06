@@ -8,7 +8,7 @@ pub fn run(input: Vec<String>) {
     println!("part two: {}", part_two(&input));
 }
 
-fn calculate_seat_id(seat: &String) -> u32 {
+fn calculate_seat_id(seat: &str) -> u32 {
     let (row, col) = seat.split_at(7);
 
     let mut row_value = 0;

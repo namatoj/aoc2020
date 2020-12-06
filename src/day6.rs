@@ -16,7 +16,7 @@ pub fn part_one(input: &[String]) -> u32 {
 
     let mut answer_set: HashSet<char> = HashSet::new();
     for group_answer in input {
-        let person_answers = group_answer.split("\n");
+        let person_answers = group_answer.split('\n');
         for person_answer in person_answers {
             for c in person_answer.chars() {
                 answer_set.insert(c);
@@ -38,7 +38,7 @@ pub fn part_two(input: &[String]) -> u32 {
 
     for group_answer in input {
         let mut person_answers: Vec<String> =
-            group_answer.split("\n").map(|s| s.to_string()).collect();
+            group_answer.split('\n').map(|s| s.to_string()).collect();
         let mut all_answered = person_answers.pop().unwrap();
 
         for answer in &person_answers {
