@@ -4,6 +4,7 @@ use aoc2020::day3;
 use aoc2020::day4;
 use aoc2020::day5;
 use aoc2020::day6;
+use aoc2020::day7;
 
 use std::env;
 use std::fs::File;
@@ -25,6 +26,7 @@ fn main() {
             "day4" => day4::run(input),
             "day5" => day5::run(input),
             "day6" => day6::run(input),
+            "day7" => day7::run(input),
             _ => println!("{}, did not match :(, did you add it do aoc.rs", day),
         }
     }
